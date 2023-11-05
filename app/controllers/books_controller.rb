@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
 
+
   def show
     @book = Book.find(params[:id])
     @user = @book.user
@@ -20,7 +21,7 @@ class BooksController < ApplicationController
     else
       @books = Book.all
       @user = current_user
-      render 'show'
+      render 'index'
     end
   end
 
