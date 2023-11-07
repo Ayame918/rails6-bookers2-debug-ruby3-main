@@ -5,12 +5,14 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @user = @book.user
     @bookn = Book.new #空のフォーム
+    @post_comment = PostComment.new
   end
 
   def index
     @books = Book.all
     @book = Book.new
     @user = current_user
+    @post_comment = PostComment.new
   end
 
   def create
