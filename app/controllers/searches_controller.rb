@@ -10,7 +10,7 @@ class SearchesController < ApplicationController
     if @model  == "user" #選択されたモデルが"user"の場合ユーザーの検索を行う
       @records = User.search_for(@content, @method) #選択された検索対象（ユーザー）に対して、search_forメソッドを呼び出して検索を実行、結果を@records変数に代入
     else #"book"の検索を行う
-      @records = Books.search_for(@content, @method) #選択された検索対象（書籍）に対して、search_forメソッドを呼び出して検索を実行、結果を@records変数に代入
+      @records = Book.search_for(@content, @method) #選択された検索対象（書籍）に対して、search_forメソッドを呼び出して検索を実行、結果を@records変数に代入
     end
   end
 end
